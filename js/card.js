@@ -7,26 +7,26 @@ let cards = [
 		name: "Visa",
 		currency: "EUR"
 	},
-	{
-		name: "Visa",
-		currency: "USD"
-	},
-	{
-		name: "Visa",
-		currency: "USD"
-	},
-	{
-		name: "Visa",
-		currency: "USD"
-	},
-	{
-		name: "Visa",
-		currency: "USD"
-	},
-	{
-		name: "Visa",
-		currency: "USD"
-	}
+	//{
+	//	name: "Visa",
+	//	currency: "USD"
+	//},
+	//{
+	//	name: "Visa",
+	//	currency: "USD"
+	//},
+	//{
+	//	name: "Visa",
+	//	currency: "USD"
+	//},
+	//{
+	//	name: "Visa",
+	//	currency: "USD"
+	//},
+	//{
+	//	name: "Visa",
+	//	currency: "USD"
+	//}
 ]
 const cards_box = document.querySelector(".cards-box")
 
@@ -60,11 +60,11 @@ function createCardsBox(arr, place, limit) {
 
 	add_btn.onclick = () => window.location.href = "./create-card.html"
 
-	reloadCards(arr.slice(0, limit), items_box, arr.length)
+	reloadCards(arr.slice(0, limit), items_box)
 }
 
 
-function reloadCards(arr, place, length) {
+function reloadCards(arr, place) {
 	place.innerHTML = ""
 	for (const item of arr) {
 		const card = document.createElement("div")
@@ -93,13 +93,13 @@ function reloadCards(arr, place, length) {
 		card_back.append(balance)
 		place.append(card)
 	}
-
-	if (length < 4) {
+	
+	if (window.location.pathname === "/pages/home.html") {
 		const add_card = document.createElement("div")
 		const img = document.createElement("img")
 		const add_card_title = document.createElement("p")
 
-		add_card.classList.add("card", "add-card-btn")
+		add_card.classList.add("card", "add-new-card")
 		img.classList.add("add-card__img")
 
 		add_card_title.textContent = "Добавить карту"

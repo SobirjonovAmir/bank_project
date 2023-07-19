@@ -73,12 +73,19 @@ main {
 .card {
   position: relative;
   height: 160px;
+  transition: .3s ease;
 
   color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   cursor: pointer;
   transform-style: preserve-3d;
+}
+.card:hover {
+  scale: 1.06;
+}
+.card:active {
+scale: 1;
 }
 .front,
 .back {
@@ -206,6 +213,24 @@ main {
   font-size: 2418px;
 }
 
+.add-new-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+  font-weight: 700;
+  background: #00000020;
+  color: black;
+  align-items: center;
+  transition: .3s ease;
+}
+.add-new-card:hover {
+  scale: 1.06;
+}
+.add-new-card:active {
+scale: 1;
+}
 /*Transaction*/
 .transaction {
   display: flex;
