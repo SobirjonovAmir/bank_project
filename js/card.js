@@ -1,4 +1,4 @@
-export let cards = [
+let cards = [
 	{
 		name: "Visa",
 		currency: "RUB"
@@ -28,26 +28,43 @@ export let cards = [
 		currency: "USD"
 	}
 ]
+const cards_box = document.querySelector(".cards-box")
 
-export function CreateCardsBox(arr, place, limit) {
+if (window.location.pathname === "/pages/cards.html") {
+	createCardsBox(cards, cards_box)
+} else if (window.location.pathname === "/pages/home.html") {
+	createCardsBox(cards, cards_box, 4)
+}
+
+function createCardsBox(arr, place, limit) {
 	const title = document.createElement("h2")
 	const items_box = document.createElement("div")
 	const all_cards = document.createElement("a")
+	const add_btn = document.createElement("button")
 
+	add_btn.classList.add("add-card-btn")
 	all_cards.classList.add("link")
 	items_box.classList.add("items-box")
 
+	add_btn.textContent = "Добавить"
 	title.textContent = "Мои кошельки"
 	all_cards.textContent = "Смотреть все кошельки"
 	all_cards.href = "./cards.html"
 
-	place.append(title, items_box, all_cards)
+
+	if (window.location.pathname === "/pages/cards.html") {
+		place.append(items_box, add_btn)
+	} else if (window.location.pathname === "/pages/home.html") {
+		place.append(title, items_box, all_cards)
+	}
+
+	add_btn.onclick = () => window.location.href = "./create-card.html"
 
 	reloadCards(arr.slice(0, limit), items_box, arr.length)
 }
 
 
-export function reloadCards(arr, place, length) {
+function reloadCards(arr, place, length) {
 	place.innerHTML = ""
 	for (const item of arr) {
 		const card = document.createElement("div")

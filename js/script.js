@@ -1,18 +1,5 @@
-import {
-	cards,
-	CreateCardsBox,
-	reloadCards
-} from "./card.js"
-import {
-	transactions,
-	createTransactionBox
-} from "./transactions.js"
-
 const sign = document.forms.sign
 const log = document.forms.log
-const cards_box = document.querySelector(".cards-box")
-const transaction = document.querySelector('.transaction');
-const items_box = document.querySelector(".items-box")
 
 let user = JSON.parse(localStorage.getItem("user"))
 
@@ -54,18 +41,4 @@ if (log) {
 
 	}
 	document.querySelector(".name").value = user.email
-}
-if (items_box) {
-	document.querySelector("#user-email").textContent = user.email
-	reloadCards(cards, items_box)
-}
-
-if (transaction) {
-	createTransactionBox(transactions, transaction, 7)
-}
-
-if (cards_box) {
-	CreateCardsBox(cards, cards_box, 4)
-	document.querySelector("#user-name").textContent = `${user.name} ${user.surname}`
-	document.querySelector("#user-email").textContent = user.email
 }

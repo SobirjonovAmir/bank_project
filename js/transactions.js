@@ -1,4 +1,4 @@
-export const transactions = [
+const transactions = [
     { id: 465216, type: `Visa`, date: '2023-01-15', categories: 'Покупка продуктов', sum: 1200 },
     { id: 465216, type: `VISA`, date: '2023-07-14', categories: 'Зачисление зарплаты', sum: 35000 },
     { id: 465216, type: `Visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
@@ -16,10 +16,22 @@ export const transactions = [
     { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
     { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
     { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
+    { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
+    { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
+    { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
+    { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
+    { id: 465216, type: `visa`, date: '2023-07-12', categories: 'Оплата счета за интернет', sum: 800 },
 ];
 
+const transaction = document.querySelector('.transaction');
 
-export function createTransactionBox(arr, place, limit) {
+if (window.location.pathname === "/pages/transactions.html") {
+    createTransactionBox(transactions, transaction)
+} else {
+    createTransactionBox(transactions, transaction, 7)
+}
+
+function createTransactionBox(arr, place, limit) {
     let title = document.createElement("h2")
     let tr1 = document.createElement(`tr`)
     let th1 = document.createElement(`th`)
@@ -31,12 +43,15 @@ export function createTransactionBox(arr, place, limit) {
     let tbody = document.createElement("tbody")
     let table = document.createElement("table")
     let all_transactions = document.createElement("a")
+    let add_btn = document.createElement("button")
 
     all_transactions.classList.add("link")
+    add_btn.classList.add("add-card-btn")
 
+    add_btn.textContent = "Добавить"
     title.textContent = "Последние транзакции"
     all_transactions.textContent = "Смотреть все оплаты"
-    all_transactions.href = "#"
+    all_transactions.href = "./transactions.html"
     th1.innerHTML = `ID`
     th2.innerHTML = `Отправленно с кашелька`
     th3.innerHTML = `Категория`
@@ -46,7 +61,14 @@ export function createTransactionBox(arr, place, limit) {
     tr1.append(th1, th2, th3, th4, th5)
     thead.append(tr1)
     table.append(thead, tbody)
-    place.append(title, table, all_transactions)
+
+    if (window.location.pathname === "/pages/transactions.html") {
+        place.append(table, add_btn)
+    } else {
+        place.append(title, table, all_transactions)
+    }
+
+    add_btn.onclick = () => window.location.href = "./create-transaction.html"
 
     populateTable(arr.slice(0, limit), tbody);
 }
@@ -69,7 +91,6 @@ function populateTable(arr, place) {
         amountCell.innerHTML = item.sum.toFixed(2);
     }
 }
-
 
 
 

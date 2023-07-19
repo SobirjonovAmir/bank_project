@@ -5,20 +5,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/style.css">
-	<title>Добавить карту</title>
+	<title>Добавить транзакцию</title>
 </head>
 
 <body>
 
 
 	<div class="container">
-		<a class="back" href="./cards.html">
+		<a class="back" href="./transactions.html">
 			<img src="../icons/back.svg" alt="back">
 		</a>
-		<h1>Добавить кошелёк</h1>
+		<h1>Добавить транзакцию</h1>
 		<form name="create_cart" action="#">
-			<input required name="name" placeholder="Имя" type="text">
-			<input required name="currency" placeholder="Валюта" type="text">
+			<input required name="wallet" placeholder="Из кошелька" type="text">
+			<input required name="price" placeholder="Сумма" type="number">
+			<input required name="category" placeholder="Категория" type="text">
 			<button type="submit">Добавить</button>
 		</form>
 	</div>
