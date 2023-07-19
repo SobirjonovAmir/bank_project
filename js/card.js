@@ -30,9 +30,9 @@ let cards = [
 ]
 const cards_box = document.querySelector(".cards-box")
 
-if (window.location.pathname === "/pages/cards.html") {
+if (window.location.pathname === "/bank_project/pages/cards.html") {
 	createCardsBox(cards, cards_box)
-} else if (window.location.pathname === "/pages/home.html") {
+} else if (window.location.pathname === "/bank_project/pages/home.html") {
 	createCardsBox(cards, cards_box, 4)
 }
 
@@ -52,9 +52,9 @@ function createCardsBox(arr, place, limit) {
 	all_cards.href = "./cards.html"
 
 
-	if (window.location.pathname === "/pages/cards.html") {
+	if (window.location.pathname === "/bank_project/pages/cards.html") {
 		place.append(items_box, add_btn)
-	} else if (window.location.pathname === "/pages/home.html") {
+	} else if (window.location.pathname === "/bank_project/pages/home.html") {
 		place.append(title, items_box, all_cards)
 	}
 
@@ -94,7 +94,7 @@ function reloadCards(arr, place) {
 		place.append(card)
 	}
 	
-	if (window.location.pathname === "/pages/home.html") {
+	if (window.location.pathname === "/bank_project/pages/home.html") {
 		const add_card = document.createElement("div")
 		const img = document.createElement("img")
 		const add_card_title = document.createElement("p")

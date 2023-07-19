@@ -25,7 +25,7 @@ const transactions = [
 
 const transaction = document.querySelector('.transaction');
 
-if (window.location.pathname === "/pages/transactions.html") {
+if (window.location.pathname === "/bank_project/pages/transactions.html") {
     createTransactionBox(transactions, transaction)
 } else {
     createTransactionBox(transactions, transaction, 7)
@@ -62,7 +62,7 @@ function createTransactionBox(arr, place, limit) {
     thead.append(tr1)
     table.append(thead, tbody)
 
-    if (window.location.pathname === "/pages/transactions.html") {
+    if (window.location.pathname === "/bank_project/pages/transactions.html") {
         place.append(table, add_btn)
     } else {
         place.append(title, table, all_transactions)
