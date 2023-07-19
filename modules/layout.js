@@ -16,9 +16,9 @@ function header(place) {
     transactions_a.classList.add('a')
     email_a.classList.add('a')
 
-    home_a.href = './home.html'
-    cash_a.href = './cards.html'
-    transactions_a.href = './transactions.html'
+    home_a.href = '/index.html'
+    cash_a.href = '/pages/wallets/'
+    transactions_a.href = '/pages/transactions/'
     email_a.href = '#'
 
 
