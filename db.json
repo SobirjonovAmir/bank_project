@@ -1,11 +1,43 @@
 {
   "users": [
     {
-      "id": 0.2029357655037367,
-      "firstName": "878",
-      "age": "45"
+      "id": "84a93dbe-1d01-4494-8c4c-719cd72990fa",
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234Daler!"
+    },
+    {
+      "id": "a4a8f65a-d0d1-4d77-bfc4-35b2fb7aac94",
+      "email": "donik@gmail.com",
+      "name": "Doniyor",
+      "surname": "Adams",
+      "password": "1234Adams!"
+    },
+    {
+      "id": "31765269-8009-4ed6-9768-dba725c9d6f9",
+      "email": "donik@gmail.com",
+      "name": "Doniyor",
+      "surname": "Adams",
+      "password": "1234Donik"
+    },
+    {
+      "id": "f486bd9f-04d2-47e5-86b2-9fe16144d6c0",
+      "email": "dsalkndl@dsalknd.com",
+      "name": "faslkn",
+      "surname": "dflksdn",
+      "password": "lkdsf@213"
     }
   ],
-  "cards": [],
+  "cards": [
+    {
+      "id": "1",
+      "user_id": "f486bd9f-04d2-47e5-86b2-9fe16144d6c0",
+      "name": "Visa",
+      "balance": 10000,
+      "currency": "USD",
+      "date": "2020-01-01"
+    }
+  ],
   "transactions": []
 }

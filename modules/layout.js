@@ -58,7 +58,8 @@ function header(place) {
     }
 
     yes_btn.onclick = () => {
-        window.location.href='pages/signup/index.html'
+        localStorage.removeItem('user')
+        location.reload()
     }
 
 }
