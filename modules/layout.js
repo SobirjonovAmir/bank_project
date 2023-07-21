@@ -10,7 +10,7 @@ function header(place) {
     let my_action = document.createElement('div')
     let email = document.createElement('div')
     let home_a = document.createElement('a')
-    let cash_a = document.createElement('a')
+    let wallet_a = document.createElement('a')
     let transactions_a = document.createElement('a')
     let email_a = document.createElement('a')
     let icon = document.createElement('img')
@@ -19,7 +19,7 @@ function header(place) {
     my_action.classList.add('my_action')
     email.classList.add('email')
     home_a.classList.add('a')
-    cash_a.classList.add('a')
+    wallet_a.classList.add('a')
     transactions_a.classList.add('a')
     email_a.classList.add('a')
 
@@ -30,7 +30,7 @@ function header(place) {
 
 
     home_a.innerHTML = 'Главная'
-    cash_a.innerHTML = 'Мои кошельки'
+    wallet_a.innerHTML = 'Мои кошельки'
     transactions_a.innerHTML = 'Мои транзакции'
     email_a.innerHTML = 'alexadams@google.com'
 
@@ -38,7 +38,7 @@ function header(place) {
 
 
     headers.append(my_action, email)
-    my_action.append(home_a, cash_a, transactions_a)
+    my_action.append(home_a, wallet_a, transactions_a)
     email.append(email_a, icon)
     place.append(headers)
 
@@ -58,12 +58,9 @@ function header(place) {
     }
 
     yes_btn.onclick = () => {
-window.location.href='pages/signup/index.html'
+        window.location.href='pages/signup/index.html'
     }
 
 }
-
-console.log(backgroun_modal);
-
 
 header(document.querySelector('header'))
