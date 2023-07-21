@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/scss/home.scss">
-	<script async src="/modules/layout.js" ></script>
-	<script async src="/modules/poilce.js" ></script>
+	<script async src="/modules/layout.js"></script>
+	<script async src="/modules/poilce.js"></script>
 	<title>Главная</title>
 </head>
 
@@ -20,17 +20,33 @@
 			</div>
 
 			<div class="cards-box">
-				<div class="items-box" ></div>
+				<div class="items-box"></div>
 
-				<a  class="link" href="/pages/wallets/">Показать все</a>
+				<h2 class="title">Мои кошельки</h2>
+				<div class="items-box"></div>
+				<a class="link" href="/pages/wallets/">Показать все</a>
 			</div>
 			<div class="transaction">
+				<h2 class="title">Мои транзакции</h2>
 				<table></table>
-
-				<a  class="link" href="/pages/transactions/">Показать все</a>
+				<a class="link" href="/pages/transactions/">Показать все</a>
 			</div>
 		</div>
 	</main>
+
+
+
+	<div class="backgroun_modal">
+		<div class="modal">
+			<h1>Хотите выйти</h1>
+			<div class="flex_button">
+				<button class="yes op">Yes</button>
+
+				<button class="noo op">No</button>
+			</div>
+		</div>
+	</div><!-- backgroun_modal -->
+
 	<script type="module" src="main.js"></script>
 </body>
 

@@ -1,5 +1,11 @@
 {
-    "users": [],
-    "cards": [],
-    "transactions": []
+  "users": [
+    {
+      "id": 0.2029357655037367,
+      "firstName": "878",
+      "age": "45"
+    }
+  ],
+  "cards": [],
+  "transactions": []
 }
