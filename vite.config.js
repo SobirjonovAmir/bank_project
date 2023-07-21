@@ -15,7 +15,8 @@ export default defineConfig({
                 transactions: resolve(__dirname, 'pages/transactions/index.html'),
                 signup: resolve(__dirname, 'pages/signup/index.html'),
                 "create-transaction": resolve(__dirname, 'pages/create-transaction/index.html'),
-                "create-card": resolve(__dirname, 'pages/create-card/index.html')
+                "create-card": resolve(__dirname, 'pages/create-card/index.html'),
+                card: resolve(__dirname, 'pages/card/index.html')
             },
         },
     },
