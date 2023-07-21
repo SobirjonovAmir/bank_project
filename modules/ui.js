@@ -4,7 +4,6 @@ import {
     populateTable
 } from "./helpers"
 
-
 export function reloadCards(arr, place) {
     place.innerHTML = ""
     for (const item of arr) {
@@ -14,7 +13,6 @@ export function reloadCards(arr, place) {
         const card_name = document.createElement("span")
         const currency = document.createElement("span")
         const balance = document.createElement("span")
-
 
         card.classList.add("card")
         card_front.classList.add("front")
@@ -27,6 +25,9 @@ export function reloadCards(arr, place) {
 
         card.onclick = () => {
             handleClick(card)
+        }
+        card.ondblclick = () => {
+            window.location.href = "/pages/card/"
         }
 
         card.append(card_front, card_back)
@@ -55,6 +56,5 @@ export function createTransactionBox(arr, place, limit) {
     tr1.append(th1, th2, th3, th4, th5)
     thead.append(tr1)
     place.append(thead, tbody)
-
     populateTable(arr.slice(0, limit), tbody);
 }

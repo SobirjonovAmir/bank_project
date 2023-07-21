@@ -1,33 +1,16 @@
 import {
-    reloadCards,
     createTransactionBox
-} from "./modules/ui";
+} from "./ui.js"
 
 
-let cardBox = document.querySelector('.items-box')
-let table = document.querySelector('table')
-
-let fake = [
-    {
-        name: "Visa",
-        currency: "RUB"
-    },
-    {
-        name: "Visa",
-        currency: "EUR"
-    },
-    {
-        name: "Visa",
-        currency: "RUB"
-    },
-    {
-        name: "Humo",
-        currency: "UZD"
-    },
-    {
-        name: "Visa",
-        currency: "EUR"
-    }
+let fake = [{
+    name: "Visa",
+    currency: "RUB"
+},
+{
+    name: "Visa",
+    currency: "EUR"
+}
 ]
 let fakeT = [{
     id: 465216,
@@ -80,7 +63,5 @@ let fakeT = [{
 },
 ]
 
-
-reloadCards(fake, cardBox)
-
-createTransactionBox(fakeT, table, 7)
+let tran_box = document.querySelector('table')
+createTransactionBox(fakeT, tran_box)
