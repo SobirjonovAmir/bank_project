@@ -55,6 +55,5 @@ export function createTransactionBox(arr, place, limit) {
     tr1.append(th1, th2, th3, th4, th5)
     thead.append(tr1)
     place.append(thead, tbody)
-
     populateTable(arr.slice(0, limit), tbody);
 }
