@@ -3,7 +3,7 @@ function header(place) {
     let my_action = document.createElement('div')
     let email = document.createElement('div')
     let home_a = document.createElement('a')
-    let cash_a = document.createElement('a')
+    let wallet_a = document.createElement('a')
     let transactions_a = document.createElement('a')
     let email_a = document.createElement('a')
     let icon = document.createElement('img')
@@ -12,18 +12,18 @@ function header(place) {
     my_action.classList.add('my_action')
     email.classList.add('email')
     home_a.classList.add('a')
-    cash_a.classList.add('a')
+    wallet_a.classList.add('a')
     transactions_a.classList.add('a')
     email_a.classList.add('a')
 
-    home_a.href = './home.html'
-    cash_a.href = './cards.html'
-    transactions_a.href = './transactions.html'
+    home_a.href = 'index.html'
+    wallet_a.href = 'pages/wallets/index.html'
+    transactions_a.href = 'pages/create-transaction/index.html'
     email_a.href = '#'
 
 
     home_a.innerHTML = 'Главная'
-    cash_a.innerHTML = 'Мои кошельки'
+    wallet_a.innerHTML = 'Мои кошельки'
     transactions_a.innerHTML = 'Мои транзакции'
     email_a.innerHTML = 'alexadams@google.com'
 
@@ -34,9 +34,9 @@ function header(place) {
     }
 
     headers.append(my_action, email)
-    my_action.append(home_a, cash_a, transactions_a)
+    my_action.append(home_a, wallet_a, transactions_a)
     email.append(email_a, icon)
     place.append(headers)
-}
 
+}
 header(document.querySelector('header'))
