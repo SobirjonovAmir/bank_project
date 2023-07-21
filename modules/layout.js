@@ -27,7 +27,7 @@ function header(place) {
     transactions_a.innerHTML = 'Мои транзакции'
     email_a.innerHTML = 'alexadams@google.com'
 
-    icon.src = '../icons/log-out.png'
+    //icon.src = '../icons/log-out.png'
 
     icon.onclick = () => {
         window.location.href = "./log.html"

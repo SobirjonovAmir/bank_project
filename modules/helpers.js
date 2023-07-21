@@ -11,7 +11,7 @@ export function handleClick(arg) {
     if (arg.classList.contains("active")) {
         arg.classList.remove("active")
         arg.classList.add("close")
-    } else {
+    } else if (!arg.classList.contains("active")) {
         arg.classList.remove("close")
         arg.classList.add("active")
     }
