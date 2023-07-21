@@ -21,6 +21,10 @@ let fake = [
         currency: "RUB"
     },
     {
+        name: "Humo",
+        currency: "UZD"
+    },
+    {
         name: "Visa",
         currency: "EUR"
     }
