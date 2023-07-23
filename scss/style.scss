@@ -29,7 +29,10 @@ form {
   transition: all 1s ease;
 }
 
-form input {
+form input, select {
+appearance: none;
+
+
   max-width: 438px;
   border-radius: 10px;
   border: 1px solid #000;

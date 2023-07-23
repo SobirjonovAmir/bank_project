@@ -27,6 +27,13 @@
       "name": "faslkn",
       "surname": "dflksdn",
       "password": "lkdsf@213"
+    },
+    {
+      "id": "b25b3d4b-7e1f-4480-8337-63da2614678c",
+      "email": "uktamov.rahim01@mail.ru",
+      "name": "РАХИМ",
+      "surname": "Уктамов",
+      "password": "12345678"
     }
   ],
   "cards": [
@@ -37,6 +44,22 @@
       "balance": 10000,
       "currency": "USD",
       "date": "2020-01-01"
+    },
+    {
+      "id": "f75b8441-03b9-4d46-9c4b-4c4b63a8326e",
+      "user_id": "b25b3d4b-7e1f-4480-8337-63da2614678c",
+      "date": "2023-07-24",
+      "name": "РАХИМ",
+      "currency": "RUB",
+      "balance": "2000"
+    },
+    {
+      "id": "24e5ca54-4e82-4047-ab4a-005615b4b5d8",
+      "user_id": "b25b3d4b-7e1f-4480-8337-63da2614678c",
+      "date": "2023-07-24",
+      "name": "РАХИМ",
+      "currency": "UZS",
+      "balance": "5000"
     }
   ],
   "transactions": []

@@ -3,6 +3,8 @@ let backgroun_modal = document.querySelector('.backgroun_modal')
 let yes_btn = document.querySelector('.yes')
 let no_btn = document.querySelector('.noo')
 
+let userData = JSON.parse(localStorage.getItem("user"))
+
 
 function header(place) {
 
@@ -32,7 +34,7 @@ function header(place) {
     home_a.innerHTML = 'Главная'
     wallet_a.innerHTML = 'Мои кошельки'
     transactions_a.innerHTML = 'Мои транзакции'
-    email_a.innerHTML = 'alexadams@google.com'
+    email_a.innerHTML = userData.email
 
     icon.src = '../public/exit.png'
 
