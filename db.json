@@ -37,6 +37,22 @@
       "balance": 10000,
       "currency": "USD",
       "date": "2020-01-01"
+    },
+    {
+      "id": "edb1b8d9-b3ca-47a4-86de-ca6c7a140f28",
+      "user_id": 4,
+      "date": "2023-07-24",
+      "name": "azamat",
+      "balance": "5454",
+      "currency": "EUR"
+    },
+    {
+      "id": "7d25d22f-c2f4-4eff-9b8a-0847bd3b2bea",
+      "user_id": 4,
+      "date": "2023-07-24",
+      "name": "4",
+      "currency": "RUB",
+      "balance": "5455"
     }
   ],
   "transactions": []

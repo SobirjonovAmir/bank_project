@@ -4,6 +4,7 @@ import {
 } from "./modules/ui";
 
 
+
 let cardBox = document.querySelector('.items-box')
 let table = document.querySelector('table')
 
@@ -79,8 +80,6 @@ let fakeT = [{
     sum: 800
 },
 ]
-
-
 reloadCards(fake, cardBox)
 
 createTransactionBox(fakeT, table, 7)
