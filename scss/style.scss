@@ -93,3 +93,30 @@ a {
   width: 30px;
   height: auto;
 }
+select {
+  max-width: 438px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: black;
+  padding: 20px 25px;
+  outline: none;
+}
+
+option {
+  max-width: 438px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: black;
+  padding: 20px 25px;
+  outline: none;
+}

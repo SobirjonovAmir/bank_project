@@ -37,6 +37,30 @@
       "balance": 10000,
       "currency": "USD",
       "date": "2020-01-01"
+    },
+    {
+      "id": "91a4d7e8-f2c4-4fbd-b0b4-46e1e2c64895",
+      "user_id": 5,
+      "date": "2023-07-24",
+      "name": "Muhammad",
+      "balance": "8352856532",
+      "currency": "UZD"
+    },
+    {
+      "id": "2712f488-4080-4c64-b4fb-e0014aa66b36",
+      "user_id": 5,
+      "date": "2023-07-24",
+      "name": "UzCard",
+      "currency": "EUR",
+      "balance": "36"
+    },
+    {
+      "id": "e3902246-73b2-432c-8487-bf0b307d82fc",
+      "user_id": 5,
+      "date": "2023-07-24",
+      "name": "MasterCard",
+      "currency": "RUB",
+      "balance": "68358"
     }
   ],
   "transactions": []
