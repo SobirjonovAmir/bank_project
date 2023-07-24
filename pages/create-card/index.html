@@ -11,17 +11,26 @@
 <body>
 
 	<div class="container">
-		<a class="back" href="http://localhost:5173/pages/wallets/index.html">
-			<img src="../icons/back.svg" alt="back">
+		<a class="back" href="../../index.html">
+		  <img src="img/reply_black_24dp.svg" alt="back">
 		</a>
 		<h1>Добавить кошелёк</h1>
 		<form name="create_cart" action="#">
-			<input required name="name" placeholder="Имя" type="text">
-			<input required name="currency" placeholder="Валюта" type="text">
-			<button class="btn" type="submit">Добавить</button>
+		  <input required name="name"  placeholder="Имя" type="text">
+		  <select required class="currency" name="currency">
+			<option value="" selected disabled hidden>Select currency</option>
+			<option value="USD">USD</option>
+			<option value="EUR">EUR</option>
+			<option value="RUB">RUB</option>
+			<option value="UZB">UZD</option>
+		  </select>
+		  <input required name="balance" placeholder="Баланс" type="number">
+		
+		  <button class="btn" type="submit">Добавить</button>
 		</form>
-	</div>
-
+	  </div>
+	
+<script type="module" src="./script.js"></script>
 </body>
 
 </html>
