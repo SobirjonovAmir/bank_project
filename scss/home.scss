@@ -90,7 +90,7 @@ main {
 }
 
 .card:active {
-  scale: 1;
+  scale: 0.97;
 }
 
 .front,
@@ -203,7 +203,7 @@ main {
   cursor: pointer;
 }
 
-.a11{
+.a11 {
   color: white;
   font-size: 20px;
   text-decoration: none;
@@ -221,7 +221,7 @@ main {
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
-  & a{
+  & a {
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -350,18 +350,22 @@ header {
   cursor: pointer;
 }
 
-///////////////////////modal////////////////  
 .modal {
   width: 350px;
   height: 200px;
   border: 2px solid rgb(18, 73, 192);
   color: white;
-  background: linear-gradient(159deg, rgba(160, 159, 173, 0.6727065826330532) 19%, rgba(209, 209, 209, 0.6643032212885154) 53%, rgba(167, 232, 245, 0.7399334733893557) 69%);
+  background: linear-gradient(
+    159deg,
+    rgba(160, 159, 173, 0.6727065826330532) 19%,
+    rgba(209, 209, 209, 0.6643032212885154) 53%,
+    rgba(167, 232, 245, 0.7399334733893557) 69%
+  );
   display: block;
   text-align: center;
   padding: 50px 0;
   position: fixed;
-  top:30%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -376,14 +380,18 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(159deg, rgba(160, 159, 173, 0.6727065826330532) 19%, rgba(209, 209, 209, 0.6643032212885154) 53%, rgba(167, 232, 245, 0.7399334733893557) 69%);
+  background: linear-gradient(
+    159deg,
+    rgba(160, 159, 173, 0.6727065826330532) 19%,
+    rgba(209, 209, 209, 0.6643032212885154) 53%,
+    rgba(167, 232, 245, 0.7399334733893557) 69%
+  );
   display: none;
   z-index: 99;
   scale: 0;
   opacity: 0;
   transition: 1s ease;
   backdrop-filter: blur(5px);
-
 }
 
 .flex_button {
@@ -398,10 +406,20 @@ header {
   width: 100px;
   height: 30px;
   font-size: 20px;
-  background: linear-gradient(159deg, rgba(160, 159, 173, 0.6727065826330532) 19%, rgba(209, 209, 209, 0.6643032212885154) 53%, rgba(167, 232, 245, 0.7399334733893557) 69%);
+  background: linear-gradient(
+    159deg,
+    rgba(160, 159, 173, 0.6727065826330532) 19%,
+    rgba(209, 209, 209, 0.6643032212885154) 53%,
+    rgba(167, 232, 245, 0.7399334733893557) 69%
+  );
   display: block;
   box-shadow: 5px 5px 10px gray;
   border: 1px solid rgba(211, 211, 211, 0.712);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.op:active {
+  scale: 0.9;
 }
 .wrapper {
   display: grid;

@@ -1,17 +1,10 @@
 import {
     createTransactionBox
-} from "./ui.js"
+} from "/modules/ui.js"
 
+let userData = JSON.parse(localStorage.getItem("user"))
+document.querySelector("#user-email").textContent = userData.email
 
-let fake = [{
-    name: "Visa",
-    currency: "RUB"
-},
-{
-    name: "Visa",
-    currency: "EUR"
-}
-]
 let fakeT = [{
     id: 465216,
     type: "Visa",

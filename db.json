@@ -15,18 +15,11 @@
       "password": "1234Adams!"
     },
     {
-      "id": "31765269-8009-4ed6-9768-dba725c9d6f9",
-      "email": "donik@gmail.com",
-      "name": "Doniyor",
-      "surname": "Adams",
-      "password": "1234Donik"
-    },
-    {
-      "id": "f486bd9f-04d2-47e5-86b2-9fe16144d6c0",
-      "email": "dsalkndl@dsalknd.com",
-      "name": "faslkn",
-      "surname": "dflksdn",
-      "password": "lkdsf@213"
+      "id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "email": "amka7787@gmail.com",
+      "name": "Amir",
+      "surname": "Sobirjonov",
+      "password": "asdgsd78"
     }
   ],
   "cards": [
@@ -37,22 +30,6 @@
       "balance": 10000,
       "currency": "USD",
       "date": "2020-01-01"
-    },
-    {
-      "id": "edb1b8d9-b3ca-47a4-86de-ca6c7a140f28",
-      "user_id": 4,
-      "date": "2023-07-24",
-      "name": "azamat",
-      "balance": "5454",
-      "currency": "EUR"
-    },
-    {
-      "id": "7d25d22f-c2f4-4eff-9b8a-0847bd3b2bea",
-      "user_id": 4,
-      "date": "2023-07-24",
-      "name": "4",
-      "currency": "RUB",
-      "balance": "5455"
     }
   ],
   "transactions": []

@@ -2,34 +2,21 @@ import {
     reloadCards,
     createTransactionBox
 } from "./modules/ui";
-
+import {
+    getData
+} from "/modules/http"
 
 
 let cardBox = document.querySelector('.items-box')
 let table = document.querySelector('table')
+let userData = JSON.parse(localStorage.getItem("user"))
+document.querySelector("#user-name").textContent = userData.name
+document.querySelector("#user-email").textContent = userData.email
 
-let fake = [
-    {
-        name: "Visa",
-        currency: "RUB"
-    },
-    {
-        name: "Visa",
-        currency: "EUR"
-    },
-    {
-        name: "Visa",
-        currency: "RUB"
-    },
-    {
-        name: "Humo",
-        currency: "UZD"
-    },
-    {
-        name: "Visa",
-        currency: "EUR"
-    }
-]
+getData("/cards")
+    .then(res => reloadCards(res.data, cardBox, 4));
+
+
 let fakeT = [{
     id: 465216,
     type: "Visa",
@@ -80,6 +67,5 @@ let fakeT = [{
     sum: 800
 },
 ]
-reloadCards(fake, cardBox)
 
 createTransactionBox(fakeT, table, 7)
