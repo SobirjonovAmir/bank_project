@@ -15,24 +15,33 @@
       "password": "1234Adams!"
     },
     {
-      "id": "31765269-8009-4ed6-9768-dba725c9d6f9",
-      "email": "donik@gmail.com",
-      "name": "Doniyor",
-      "surname": "Adams",
-      "password": "1234Donik"
-    },
-    {
-      "id": "f486bd9f-04d2-47e5-86b2-9fe16144d6c0",
-      "email": "dsalkndl@dsalknd.com",
-      "name": "faslkn",
-      "surname": "dflksdn",
-      "password": "lkdsf@213"
+      "id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "email": "amka7787@gmail.com",
+      "name": "Amir",
+      "surname": "Sobirjonov",
+      "password": "asdgsd78"
     }
   ],
   "cards": [
     {
       "id": "1",
       "user_id": "f486bd9f-04d2-47e5-86b2-9fe16144d6c0",
+      "name": "Visa",
+      "balance": 10000,
+      "currency": "USD",
+      "date": "2020-01-01"
+    },
+    {
+      "id": "2",
+      "user_id": "923b510d-30a-4-fc35c40f0836",
+      "name": "Visa",
+      "balance": 10000,
+      "currency": "USD",
+      "date": "2020-01-01"
+    },
+    {
+      "id": "3",
+      "user_id": "923b510d-53035c40f0836",
       "name": "Visa",
       "balance": 10000,
       "currency": "USD",
