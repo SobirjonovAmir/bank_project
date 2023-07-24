@@ -1,6 +1,6 @@
+
 let userData = JSON.parse(localStorage.getItem("user"))
 createModal(document.querySelector("header"))
-
 let backgroun_modal = document.querySelector('.backgroun_modal')
 let yes_btn = document.querySelector('.yes')
 let no_btn = document.querySelector('.noo')
@@ -24,11 +24,12 @@ function header(place) {
     wallet_a.classList.add('a')
     transactions_a.classList.add('a')
     email_a.classList.add('a')
+    icon.classList.add('logout')
 
     home_a.href = '/'
     wallet_a.href = '/pages/wallets/'
     transactions_a.href = '/pages/transactions/'
-    email_a.href = '#'
+    email_a.href = '/'
 
 
     home_a.innerHTML = 'Главная'
@@ -37,6 +38,7 @@ function header(place) {
     email_a.innerHTML = userData.email
 
     icon.src = '/public/exit.png'
+
 
 
     headers.append(my_action, email)

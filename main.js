@@ -6,6 +6,7 @@ import {
     getData
 } from "/modules/http"
 
+
 let cardBox = document.querySelector('.items-box')
 let table = document.querySelector('table')
 let userData = JSON.parse(localStorage.getItem("user"))
@@ -66,7 +67,5 @@ let fakeT = [{
     sum: 800
 },
 ]
-
-
 
 createTransactionBox(fakeT, table, 7)

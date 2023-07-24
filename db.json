@@ -30,22 +30,6 @@
       "balance": 10000,
       "currency": "USD",
       "date": "2020-01-01"
-    },
-    {
-      "id": "2",
-      "user_id": "923b510d-30a-4-fc35c40f0836",
-      "name": "Visa",
-      "balance": 10000,
-      "currency": "USD",
-      "date": "2020-01-01"
-    },
-    {
-      "id": "3",
-      "user_id": "923b510d-53035c40f0836",
-      "name": "Visa",
-      "balance": 10000,
-      "currency": "USD",
-      "date": "2020-01-01"
     }
   ],
   "transactions": []
