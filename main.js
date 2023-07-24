@@ -3,7 +3,8 @@ import {
     createTransactionBox
 } from "./modules/ui";
 
-
+let luboychiz = JSON.parse(localStorage.getItem("user"))
+document.querySelector('#username').textContent = `${luboychiz.name} ${luboychiz.surname}`
 let cardBox = document.querySelector('.items-box')
 let table = document.querySelector('table')
 

@@ -27,6 +27,34 @@
       "name": "faslkn",
       "surname": "dflksdn",
       "password": "lkdsf@213"
+    },
+    {
+      "id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "email": "donik.abdusalimov@mail.ru",
+      "name": "Donik",
+      "surname": "Abdusalimov",
+      "password": "12345678"
+    },
+    {
+      "id": "a107931f-9bdb-4b67-af39-6b0471783e56",
+      "email": "donik.abdusalimov@mail.ru",
+      "name": "Donik2",
+      "surname": "Abdusalimov",
+      "password": "12345678"
+    },
+    {
+      "id": "3914d005-23fa-4e40-b5c8-2c95975e9e82",
+      "email": "donik.abdusalimov@mail.ru",
+      "name": "Donik2",
+      "surname": "Abdusalimov",
+      "password": "12345678"
+    },
+    {
+      "id": "910d67d4-336d-46ac-a0ef-3084ffb94bda",
+      "email": "donik.abdusalimov@mail.ru",
+      "name": "Donik",
+      "surname": "Abdusalimov",
+      "password": "12345678"
     }
   ],
   "cards": [
@@ -37,6 +65,60 @@
       "balance": 10000,
       "currency": "USD",
       "date": "2020-01-01"
+    },
+    {
+      "id": "f4b17a80-9b09-4dce-a49e-b75213513be9",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-24",
+      "name": "Donik",
+      "currency": "UZS",
+      "balance": "100"
+    },
+    {
+      "id": "632bf10b-3617-4d3c-99df-72b041276d0e",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-24",
+      "name": "Donik2",
+      "currency": "USD",
+      "balance": "100"
+    },
+    {
+      "id": "3b26da53-c50d-416f-bdd8-b388606e507d",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-24",
+      "name": "Donik3",
+      "currency": "USD",
+      "balance": "1000"
+    },
+    {
+      "id": "ed35ff57-e87a-4f90-97ab-5d99a8c4a583",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-24",
+      "name": "Donik4",
+      "currency": "RUB",
+      "balance": "100"
+    },
+    {
+      "id": "e00SAhW"
+    },
+    {
+      "id": "elfzcwU"
+    },
+    {
+      "id": "1c29154c-1c71-4bf1-a8e5-d825271d03a8",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-24",
+      "name": "Donik",
+      "currency": "EUR",
+      "balance": "100"
+    },
+    {
+      "id": "cb8285a4-ed15-4e82-8ee8-fc0fbb98d24e",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-24",
+      "name": "wws",
+      "currency": "RUB",
+      "balance": "1000"
     }
   ],
   "transactions": []

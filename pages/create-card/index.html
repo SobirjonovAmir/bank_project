@@ -17,11 +17,21 @@
 		<h1>Добавить кошелёк</h1>
 		<form name="create_cart" action="#">
 			<input required name="name" placeholder="Имя" type="text">
-			<input required name="currency" placeholder="Валюта" type="text">
+			<select required name="currency">
+			<option value="" selected disabled hidden> Выберите валюту</option>
+			<option value="USD">USD</option>
+			<option value="EUR">EUR</option>
+			<option value="RUB">RUB</option>
+			<option value="UZD">UZD</option>
+			</select>
+			<input required name="balance" placeholder="Баланс" type="number">
 			<button class="btn" type="submit">Добавить</button>
-		</form>
+		  </form>
 	</div>
 
+
+	<script type="module" src="card.js">
+	</script>
 </body>
 
 </html>
