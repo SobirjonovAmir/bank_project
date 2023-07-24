@@ -21,7 +21,7 @@ export function reloadCards(arr, place) {
         card.style.background = `linear-gradient(66deg, ${getRandomColor()} 0%, ${getRandomColor()} 100%)`
         card_name.textContent = item.name
         currency.textContent = item.currency
-        balance.textContent = "14000"
+        balance.textContent = "Balance: " + item.balance
 
         card.onclick = () => {
             handleClick(card)

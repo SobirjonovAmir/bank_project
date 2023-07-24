@@ -32,10 +32,7 @@ body::-webkit-scrollbar-track {
 
 .container .title h1 {
   margin-top: 40px;
-  font-size: 46px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  font-size: 44px;
 }
 
 .container .title h1 span {
@@ -50,8 +47,7 @@ body::-webkit-scrollbar-track {
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 70px;
+  margin: 10px 0 30px 0;
 }
 
 main {
@@ -138,6 +134,74 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   perspective: 1400px;
+}
+.new_card {
+  margin: 0 0 0 20px;
+  .d {
+    padding: 0 0 0 10px;
+    color: #a9a9a9;
+    cursor: pointer;
+
+  }
+  .add_new_card {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #a9a9a9;
+    cursor: pointer;
+    margin: 0 0 0 46px;
+    .plus {
+      font-size: 27px;
+      color: #a9a9a9;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+  &:hover {
+    .d {
+      color: #555;
+    }
+    .add_new_card{
+      border: 2px solid #555;
+      .plus {
+        color: #555;
+      }
+    }
+  }
+}
+.new_transaction {
+  width: 175px;
+  .d {
+    padding: 0 0 0 10px;
+    color: #a9a9a9;
+    cursor: pointer;
+
+  }
+  .add_new_transaction {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #a9a9a9;
+    cursor: pointer;
+    margin: 0 0 0 63px;
+    .plus {
+      font-size: 27px;
+      color: #a9a9a9;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+  &:hover {
+    .d {
+      color: #555;
+    }
+    .add_new_transaction{
+      border: 2px solid #555;
+      .plus {
+        color: #555;
+      }
+    }
+  }
 }
 
 .active {
@@ -275,6 +339,7 @@ main {
 }
 
 table {
+  display: none;
   overflow: hidden;
   border-collapse: collapse;
 }
@@ -314,6 +379,10 @@ header {
   padding: 25px 0;
   justify-content: space-between;
   align-items: center;
+}
+.logout {
+  width: 20px;
+  height: 20px;
 }
 
 .header-items {

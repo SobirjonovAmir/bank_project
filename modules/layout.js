@@ -22,11 +22,12 @@ function header(place) {
     wallet_a.classList.add('a')
     transactions_a.classList.add('a')
     email_a.classList.add('a')
+    icon.classList.add('logout')
 
-    home_a.href = 'index.html'
+    home_a.href = '/'
     wallet_a.href = '/pages/wallets/'
     transactions_a.href = '/pages/transactions/'
-    email_a.href = '#'
+    email_a.href = '/'
 
 
     home_a.innerHTML = 'Главная'
@@ -34,7 +35,7 @@ function header(place) {
     transactions_a.innerHTML = 'Мои транзакции'
     email_a.innerHTML = 'alexadams@google.com'
 
-    icon.src = '../public/exit.png'
+    icon.src = 'https://static.thenounproject.com/png/486310-200.png'
 
 
     headers.append(my_action, email)

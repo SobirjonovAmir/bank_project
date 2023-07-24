@@ -2,85 +2,43 @@ import {
     reloadCards,
     createTransactionBox
 } from "./modules/ui";
+import { getData } from "./modules/http";
 
-
+const userData = JSON.parse(localStorage.getItem("user")) 
+let viewName = document.querySelector('#user-name')
+let viewEmail = document.querySelector('#user-email')
 let cardBox = document.querySelector('.items-box')
 let table = document.querySelector('table')
-
-let fake = [
-    {
-        name: "Visa",
-        currency: "RUB"
-    },
-    {
-        name: "Visa",
-        currency: "EUR"
-    },
-    {
-        name: "Visa",
-        currency: "RUB"
-    },
-    {
-        name: "Humo",
-        currency: "UZD"
-    },
-    {
-        name: "Visa",
-        currency: "EUR"
-    }
-]
-let fakeT = [{
-    id: 465216,
-    type: "Visa",
-    date: '2023-01-15',
-    categories: 'Покупка продуктов',
-    sum: 1200
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-14',
-    categories: 'Зачисление зарплаты',
-    sum: 35000
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-]
+// btn plus crete some
+let tr = document.querySelector('.new_transaction') 
+let newCardBtn = document.querySelector('.add_new_card')
+let newTransBtn = document.querySelector('.add_new_transaction')
 
 
-reloadCards(fake, cardBox)
+viewName.innerHTML = userData.surname + " " + userData.name
+viewEmail.innerHTML = userData.email
 
-createTransactionBox(fakeT, table, 7)
+newCardBtn.onclick = () => {
+    location.assign("/pages/create-card/")
+}
+newTransBtn.onclick = () => {
+    location.assign("/pages/create-transaction/")
+}
+
+
+getData('/cards')
+    .then(res => {
+        reloadCards(res.data.slice(0, 4), cardBox)
+    })
+    
+getData('/transactions')
+    .then(res => {
+        // if(res.data.lenght !== 0) {
+        //     // tr.style.display = "none"
+        //     table.style.display = "table"
+        // }
+        createTransactionBox(res.data, table, 7)
+    })
+    
+// createTransactionBox(fakeT, table, 7)
+
