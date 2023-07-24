@@ -27,7 +27,7 @@ export function reloadCards(arr, place, limit) {
             handleClick(card)
         }
         card.ondblclick = () => {
-            window.location.href = "/pages/card/"
+            window.location.href = `/pages/card/?id=${item.id}`
         }
 
         card.append(card_front, card_back)

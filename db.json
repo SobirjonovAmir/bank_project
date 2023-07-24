@@ -30,6 +30,22 @@
       "balance": 10000,
       "currency": "USD",
       "date": "2020-01-01"
+    },
+    {
+      "id": "ec58e33c-8cc9-4ad7-9aa2-f67759b11dc3",
+      "user_id": "84a93dbe-1d01-4494-8c4c-719cd72990fa",
+      "date": "2023-07-24",
+      "name": "MASTERCARD",
+      "currency": "JPY",
+      "balance": "2222"
+    },
+    {
+      "id": "b1222f03-4605-4684-93f9-1e394fc4ca3d",
+      "user_id": "84a93dbe-1d01-4494-8c4c-719cd72990fa",
+      "date": "2023-07-24",
+      "name": "Daler",
+      "currency": "ANG",
+      "balance": "2222"
     }
   ],
   "transactions": []
