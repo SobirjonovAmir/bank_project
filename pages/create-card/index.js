@@ -1,34 +1,60 @@
 import { v4 as uuidv4 } from 'uuid';
-import { postData } from '../../modules/http';
-import { reloadCards } from "../../modules/ui";
+import { getSymbols, postData } from '../../modules/http';
 
-const userData = JSON.parse(localStorage.getItem("user"))
-let cardBox = document.querySelector('.items-box')
-let form = document.forms.create_cart
+const form = document.forms.create_card
+const select = document.querySelector('datalist')
+let userData = JSON.parse(localStorage.getItem("user"))
+let symbols = []
 
+getSymbols()
+	.then(res => {
+		symbols = Object.keys(res)
+		for(let key in res) {
+			let opt = new Option(res[key], key)
+			select.append(opt)
+		}
+	})
 
 form.onsubmit = (e) => {
-    e.preventDefault()
-    
-    let userCard = {
-        id: uuidv4(),
-        user_id: userData.id,
-        date: new Date().toLocaleDateString('en-CA'),
-    }
+	e.preventDefault()
 
-    let fm = new FormData(form)
+	let card = {
+		"id": uuidv4(),
+		"user_id": userData.id,
+		"date": getDate()
+	}
+	let fm = new FormData(form)
+	fm.forEach((value, key) => {
+		card[key] = value
+	})
 
-    fm.forEach((value, key) => {
-        userCard[key] = value
-    })
+	if(!symbols.includes(card.currency)) {
+		alert('There are no such a currency')
+		return
+	}
 
-    postData("/cards", userCard)
-        .then(res => {
-            reloadCards(res.data.cards, cardBox)
-            console.log(res);
-        })
+	postData("/cards", card)
+		.then(res => {
+			if (res.status === 200 || res.status === 201) {
+				location.assign('/pages/wallets/')
+			}
+		})
 
-        form.reset()
-
-        // location.assign('/pages/wallets/')
+	form.reset()
 }
+
+
+function getDate() {
+	const currentDate = new Date()
+	const year = currentDate.getFullYear();
+	const month = addZero(currentDate.getMonth() + 1);
+	const day = addZero(currentDate.getDate());
+	return `${year}-${month}-${day}`;
+}
+
+function addZero(number) {
+	return number < 10 ? "0" + number : number;
+}
+
+
+

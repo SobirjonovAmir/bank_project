@@ -15,20 +15,38 @@
       "password": "1234Adams!"
     },
     {
-      "id": "31765269-8009-4ed6-9768-dba725c9d6f9",
-      "email": "donik@gmail.com",
-      "name": "Doniyor",
-      "surname": "Adams",
-      "password": "1234Donik"
-    },
-    {
-      "id": "f486bd9f-04d2-47e5-86b2-9fe16144d6c0",
-      "email": "dsalkndl@dsalknd.com",
-      "name": "faslkn",
-      "surname": "dflksdn",
-      "password": "lkdsf@213"
+      "id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "email": "amka7787@gmail.com",
+      "name": "Amir",
+      "surname": "Sobirjonov",
+      "password": "asdgsd78"
     }
   ],
-  "cards": [],
+  "cards": [
+    {
+      "id": "1",
+      "user_id": "f486bd9f-04d2-47e5-86b2-9fe16144d6c0",
+      "name": "Visa",
+      "balance": 10000,
+      "currency": "USD",
+      "date": "2020-01-01"
+    },
+    {
+      "id": "ec58e33c-8cc9-4ad7-9aa2-f67759b11dc3",
+      "user_id": "84a93dbe-1d01-4494-8c4c-719cd72990fa",
+      "date": "2023-07-24",
+      "name": "MASTERCARD",
+      "currency": "JPY",
+      "balance": "2222"
+    },
+    {
+      "id": "b1222f03-4605-4684-93f9-1e394fc4ca3d",
+      "user_id": "84a93dbe-1d01-4494-8c4c-719cd72990fa",
+      "date": "2023-07-24",
+      "name": "Daler",
+      "currency": "ANG",
+      "balance": "2222"
+    }
+  ],
   "transactions": []
 }
