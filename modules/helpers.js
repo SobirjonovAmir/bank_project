@@ -28,10 +28,14 @@ export function populateTable(arr, place) {
         const dateCell = row.insertCell(4);
 
         id.innerHTML = item.id;
-        cart_type.innerHTML = item.type;
+        cart_type.innerHTML = item.wallet.name;
         dateCell.innerHTML = `${(getDaysRemaining(item.date) * (-1))} дней назад`;
-        descriptionCell.innerHTML = item.categories;
-        amountCell.innerHTML = item.sum.toFixed(2);
+        descriptionCell.innerHTML = item.category;
+        amountCell.innerHTML = item.total.toFixed(2);
+
+
+        row.append(id, cart_type, descriptionCell, amountCell, dateCell)
+        place.append(row)
     }
 }
 

@@ -10,61 +10,30 @@ let cardBox = document.querySelector('.items-box')
 let table = document.querySelector('table')
 let userData = JSON.parse(localStorage.getItem("user"))
 
-document.querySelector("#user-name").textContent = `${userData.surname} ${userData.name}` 
+document.querySelector("#user-name").textContent = `${userData.surname} ${userData.name}`
 document.querySelector("#user-email").textContent = userData.email
 
 getData("/cards?user_id=" + userData.id)
-    .then(res => reloadCards(res.data, cardBox, 4))
+    .then(res => {
+        reloadCards(res.data, cardBox, 4)
+        if (res.data.length < 4) {
+            const add_card = document.createElement("div")
+            const img = document.createElement("img")
+            const add_card_title = document.createElement("p")
 
-let fakeT = [{
-    id: 465216,
-    type: "Visa",
-    date: '2023-01-15',
-    categories: 'Покупка продуктов',
-    sum: 1200
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-14',
-    categories: 'Зачисление зарплаты',
-    sum: 35000
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-{
-    id: 465216,
-    type: "Visa",
-    date: '2023-07-12',
-    categories: 'Оплата счета за интернет',
-    sum: 800
-},
-]
+            add_card.classList.add("card", "add-new-card")
+            img.classList.add("add-card__img")
 
-createTransactionBox(fakeT, table, 7)
+            add_card_title.textContent = "Добавить карту"
+            img.src = "/public/add-icon.svg"
+            add_card.onclick = () => location.assign("/pages/create-card/")
+
+            add_card.append(add_card_title, img)
+            cardBox.append(add_card)
+        }
+    })
+
+getData('/transactions?user_id=' + userData?.id)
+    .then(res => {
+        createTransactionBox(res.data, table, 5)
+    })
