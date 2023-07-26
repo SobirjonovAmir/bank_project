@@ -1,4 +1,5 @@
 import Card3d from "card3d";
+import axios from 'axios'
 import {
 	createTransactionBox
 } from "/modules/ui";
@@ -12,14 +13,19 @@ import {
 const item = document.querySelector(".item")
 const transactions_box = document.querySelector("table")
 const cart_place = document.getElementById("multiChart");
-let userData = JSON.parse(localStorage.getItem("user"))
+const convertBtn = document.getElementById("convert");
+const convertView = document.querySelector(".item-convert-balance");
+
+
 let card_id = location.search.split("=").at(-1)
+let card = null
 let monthNames = []
 let spendings = []
 
 getData("/cards?id=" + card_id)
 	.then(res => {
 		[user] = res.data
+		card = user
 		document.querySelector(".item-name").textContent = user.name
 		document.querySelector(".item-currency").textContent = user.currency
 		document.querySelector(".item-date").textContent = user.date
@@ -38,7 +44,26 @@ getData("/transactions?wallet_id=" + card_id)
 	})
 
 
+convertBtn.onclick = async () => {
+	try {
+		const res = await axios.get(`https://api.apilayer.com/fixer/convert?to=UZS&from=${card.currency}&amount=${card.balance}`, {
+			headers: {
+				apiKey: import.meta.env.VITE_API_KEY
+			}
+		})
+		console.log(res.data.success);
+		if(res.data.success) {
+			if (res.status === 200 || res.status === 201) {
+				convertView.innerHTML = Number(res.data.result).toLocaleString('uz-UZ')
+			}
+		} else {
+			convertView.innerHTML = res?.data?.error?.info
+		}
+	} catch(e) {
+		console.log(e);
+	}
 
+}
 
 
 
