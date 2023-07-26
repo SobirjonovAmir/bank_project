@@ -4,7 +4,10 @@ import {
 import Card3d from "card3d";
 import {
 	getRandomColor,
-} from "/modules/helpers.js"
+} from "/modules/helpers.js";
+import {
+	getData
+} from "/modules/http.js";
 
 const transactions_box = document.querySelector("table")
 const card_box = document.querySelector(".card-box")
@@ -172,22 +175,29 @@ function createMultiChart(labels, data, place) {
 
 }
 
-//const chartData = {
-//	labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-//	datasets: [
-//		{
-//			label: "This week",
-//			backgroundColor: "rgba(0, 0, 192, 1)",
-//			borderColor: "rgba(0, 0, 192, 1)",
-//			borderWidth: 2,
-//			data: [100, 200, 1150, 300, 500, 650, 490],
-//		},
-//		{
-//			label: "Last week",
-//			backgroundColor: "rgba(255, 0, 0, 1)",
-//			borderColor: "rgba(255, 0, 0, 1)",
-//			borderWidth: 1,
-//			data: [150, 370, 280, 100, 650, 120, 320],
-//		}
-//	],
-//};
+const urlParams = new URLSearchParams(window.location.search);
+const card_id = urlParams.get('id');
+
+getData(`/cards?id=${card_id}`)
+	.then(res => {
+		const user = res.data[0];
+		console.log(user);
+		document.querySelector(".item-date").textContent = user.date;
+		document.querySelector(".item-name").textContent = user.name;
+		document.querySelector(".item-balance").textContent = user.balance;
+		document.querySelector(".item-currency").textContent = user.currency;
+	});
+
+urlParams.set('card_id', card_id);
+const queryParams = urlParams.toString();
+
+getData(`/transactions?${queryParams}`)
+	.then(res => {
+		createTransactionBox(res.data, transactions_box);
+		const monthNames = [];
+		const spendings = [];
+		res.data.forEach(el => {
+			monthNames.push(el.date);
+			spendings.push(el.sum);
+		});
+	});

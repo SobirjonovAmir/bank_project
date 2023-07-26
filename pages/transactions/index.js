@@ -58,3 +58,4 @@ let fakeT = [{
 
 let tran_box = document.querySelector('table')
 createTransactionBox(fakeT, tran_box)
+

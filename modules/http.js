@@ -45,3 +45,14 @@ export const getSymbols = async () => {
         }
     }
 }
+
+export const patchData = async (path, body) => {
+    try {
+        const res = await axios.patch(BASE_URL + path, body)
+
+        return res
+    } catch (e) {
+        throw new Error('Something went wrong ' + e.message)
+    }
+}
+

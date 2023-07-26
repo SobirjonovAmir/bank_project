@@ -46,6 +46,46 @@
       "name": "Daler",
       "currency": "ANG",
       "balance": "2222"
+    },
+    {
+      "id": "da1fea4a-1e79-4109-a177-97a560dfbd88",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-26",
+      "name": "Donik",
+      "currency": "ALL",
+      "balance": "100000"
+    },
+    {
+      "id": "96fc131f-9687-4463-9576-abd622db3f98",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-26",
+      "name": "Donik",
+      "currency": "GMD",
+      "balance": ""
+    },
+    {
+      "id": "e47ccbdd-1913-4247-89dc-d627a1e3e240",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-26",
+      "name": "sas",
+      "currency": "AED",
+      "balance": "11111111"
+    },
+    {
+      "id": "0ae51c94-4e23-4b39-bccc-b3c71394f6fa",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-26",
+      "name": "D",
+      "currency": "AWG",
+      "balance": "0"
+    },
+    {
+      "id": "a5a74090-74e3-4932-adb2-04e14632f3b2",
+      "user_id": "8f1cea08-e422-45c4-801b-c12a95933249",
+      "date": "2023-07-26",
+      "name": "Donik",
+      "currency": "ANG",
+      "balance": "20"
     }
   ],
   "transactions": []
