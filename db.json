@@ -20,6 +20,13 @@
       "name": "Amir",
       "surname": "Sobirjonov",
       "password": "asdgsd78"
+    },
+    {
+      "id": "7bc42145-5b7e-42bc-98ab-fb569e346606",
+      "email": "hamrakulovm010@gmail.com",
+      "name": "Muhammad",
+      "surname": "Hamrakulov",
+      "password": "933542662"
     }
   ],
   "cards": [
@@ -46,7 +53,36 @@
       "name": "Daler",
       "currency": "ANG",
       "balance": "2222"
+    },
+    {
+      "id": "68e3320d-e690-443e-9f3b-baa7b42a3821",
+      "user_id": "7bc42145-5b7e-42bc-98ab-fb569e346606",
+      "date": "2023-07-26",
+      "name": "UzCatd",
+      "currency": "UZS",
+      "balance": "15000"
+    },
+    {
+      "id": "8c0ce31a-8ef3-488d-bc0d-6de6575a3eab",
+      "user_id": "7bc42145-5b7e-42bc-98ab-fb569e346606",
+      "date": "2023-07-26",
+      "name": "VISA",
+      "currency": "AUD",
+      "balance": "600000"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "b1222f03-4605-4684-93f9-1e394fc4ca3d",
+      "user_id": "84a93dbe-1d01-4494-8c4c-719cd72990fa",
+      "card": {
+        "user_id": "84a93dbe-1d01-4494-8c4c-719cd72990fa",
+        "categ": "VISA",
+        "date": "2023-07-24",
+        "total": 2,
+        "balance": 1222
+      }
+      
+    }
+  ]
 }

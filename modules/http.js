@@ -45,3 +45,27 @@ export const getSymbols = async () => {
         }
     }
 }
+
+export const getSymbol = async () => {
+    let symbols = JSON.parse(localStorage.getItem('symbols'))
+    if (symbols) {
+        return symbols
+    } else {
+        try {
+            const res = await axios.get("https://api.apilayer.com/fixer/symbols", {
+                headers: {
+                    apiKey: import.meta.env.VITE_API_KEY
+                }
+            })
+
+            if (res.status === 200 || res.status === 201) {
+                localStorage.setItem('symbols', JSON.stringify(res.data.symbols))
+            }
+
+            return res
+        } catch (e) {
+            console.log(e.message);
+        }
+    }
+
+}

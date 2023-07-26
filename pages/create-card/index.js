@@ -1,12 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
-import { getSymbols, postData } from '../../modules/http';
+import { getSymbol, postData } from '../../modules/http';
 
 const form = document.forms.create_card
 const select = document.querySelector('datalist')
 let userData = JSON.parse(localStorage.getItem("user"))
 let symbols = []
 
-getSymbols()
+getSymbol()
 	.then(res => {
 		symbols = Object.keys(res)
 		for(let key in res) {
