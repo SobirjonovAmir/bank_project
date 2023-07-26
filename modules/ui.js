@@ -38,6 +38,10 @@ export function reloadCards(arr, place, limit) {
 }
 
 export function createTransactionBox(arr, place, limit) {
+    if(arr.length === 0) {
+        place.innerHTML = "У вас нету транзакций"
+        return
+    }
     let tr1 = document.createElement("tr")
     let th1 = document.createElement("th")
     let th2 = document.createElement("th")

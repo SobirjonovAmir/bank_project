@@ -11,14 +11,13 @@
 <body>
 
 	<div class="container">
-		<a class="back" href="/pages/wallets/">
-			<img src="/public/back.svg" alt="back">
-		</a>
+		<div class="back" onclick="history.back()">
+			<img draggable="false" src="/public/back.svg" alt="back">
+		</div>
 		<h1>Добавить кошелёк</h1>
 		<form name="create_card" action="#">
-			<input required name="name" placeholder="Имя" type="text">
-			<!-- <select required name="currency"></select> -->
-			<input type="text" name="currency" id="currency" list="currency-list" >
+			<input required name="name" placeholder="Название" type="text">
+			<input placeholder="Вальюта" type="text" name="currency" id="currency" list="currency-list" >
 			<datalist id="currency-list" >
 
 			</datalist>

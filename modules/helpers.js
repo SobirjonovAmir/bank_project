@@ -31,7 +31,7 @@ export function populateTable(arr, place) {
         cart_type.innerHTML = item.type;
         dateCell.innerHTML = `${(getDaysRemaining(item.date) * (-1))} дней назад`;
         descriptionCell.innerHTML = item.categories;
-        amountCell.innerHTML = item.sum.toFixed(2);
+        amountCell.innerHTML = parseFloat(item.sum)
     }
 }
 

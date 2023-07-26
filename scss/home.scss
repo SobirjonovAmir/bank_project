@@ -228,9 +228,8 @@ main {
   }
 }
 
-.add-card-btn:active {
-  scale: 0.9;
-}
+
+
 
 .default {
   text-decoration: none;
@@ -250,7 +249,8 @@ main {
   flex-direction: column;
   gap: 10px;
 
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   background: #00000020;
   color: black;
   align-items: center;
@@ -258,11 +258,12 @@ main {
 }
 
 .add-new-card:hover {
-  scale: 1.06;
+  translate: 0 -5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .add-new-card:active {
-  scale: 1;
+  scale: 0.97;
 }
 
 /*Transaction*/
@@ -277,6 +278,8 @@ main {
 table {
   overflow: hidden;
   border-collapse: collapse;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 th,
@@ -425,6 +428,7 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   margin: 30px 0;
+  gap: 20px;
 }
 .card-box {
   display: flex;
@@ -432,6 +436,7 @@ header {
   gap: 15px;
 }
 .item {
+  user-select: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -461,6 +466,7 @@ header {
 }
 
 .about-card {
+  user-select: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -473,6 +479,5 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  cursor: pointer;
 }
 

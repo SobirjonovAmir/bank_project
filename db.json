@@ -46,7 +46,49 @@
       "name": "Daler",
       "currency": "ANG",
       "balance": "2222"
+    },
+    {
+      "id": "7e75c781-f0f1-4772-9f4d-e929bcb39782",
+      "user_id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "date": "2023-07-25",
+      "name": "VISA",
+      "currency": "USD",
+      "balance": "400000"
+    },
+    {
+      "id": "438101c2-2dcc-4eec-b46e-7bebff1e983a",
+      "user_id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "date": "2023-07-26",
+      "name": "asfasf",
+      "currency": "ALL",
+      "balance": "444"
+    },
+    {
+      "id": "2b490166-b117-431f-9906-366ab400ca1f",
+      "user_id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "date": "2023-07-26",
+      "name": "Amir",
+      "currency": "AFN",
+      "balance": "124124"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": 465216,
+      "user_id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "card_id": "7e75c781-f0f1-4772-9f4d-e929bcb39782",
+      "type": "Visa",
+      "date": "2023-01-15",
+      "categories": "Покупка продуктов",
+      "sum": 1200
+    },
+    {
+      "id": 465216,
+      "user_id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "type": "Visa",
+      "date": "2023-07-14",
+      "categories": "Зачисление зарплаты",
+      "sum": 35000
+    }
+  ]
 }
