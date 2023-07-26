@@ -48,6 +48,7 @@ export const getSymbols = async () => {
 
 export const getSymbol = async () => {
     let symbols = JSON.parse(localStorage.getItem('symbols'))
+    
     if (symbols) {
         return symbols
     } else {
