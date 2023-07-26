@@ -25,7 +25,7 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
   transition: all 1s ease;
 }
 
@@ -77,6 +77,16 @@ form button {
 form button:active {
   scale: 0.9;
 }
+select {
+  width: 438px;
+  height: 59px;
+  padding: 0 22px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 16px;
+}
 
 a {
   margin-top: 30px;
@@ -103,4 +113,13 @@ a {
   padding: 20px;
   border: 1px solid black;
   border-radius: 10PX;
+}
+.warning {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.balance-card {
+  margin-left: 10px;
+  color: blue;
 }

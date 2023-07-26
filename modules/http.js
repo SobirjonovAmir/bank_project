@@ -22,6 +22,15 @@ export const getData = async (path) => {
     }
 }
 
+export const patchData = async (path, body) => {
+    try {
+        const res = await axios.patch(BASE_URL + path, body)
+
+        return res
+    } catch (e) {
+        throw new Error('Something went wrong ' + e.message)
+    }
+}
 
 export const getSymbols = async () => {
     let symbols = JSON.parse(localStorage.getItem('symbols'))
@@ -45,14 +54,3 @@ export const getSymbols = async () => {
         }
     }
 }
-
-export const patchData = async (path, body) => {
-    try {
-        const res = await axios.patch(BASE_URL + path, body)
-
-        return res
-    } catch (e) {
-        throw new Error('Something went wrong ' + e.message)
-    }
-}
-
