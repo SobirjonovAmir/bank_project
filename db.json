@@ -20,6 +20,13 @@
       "name": "Amir",
       "surname": "Sobirjonov",
       "password": "asdgsd78"
+    },
+    {
+      "id": "186f684d-8098-4438-820d-910579191453",
+      "email": "full_stack_dev@gmail.com",
+      "name": "Programmer",
+      "surname": "Great",
+      "password": "987654321"
     }
   ],
   "cards": [
@@ -46,7 +53,32 @@
       "name": "Daler",
       "currency": "ANG",
       "balance": "2222"
+    },
+    {
+      "id": "87d02458-9a22-4914-9842-a433e0b52399",
+      "user_id": "186f684d-8098-4438-820d-910579191453",
+      "date": "2023-07-26",
+      "name": "MasterCard",
+      "currency": "USD",
+      "balance": 9999899
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "f21edb34-fc8d-4a9f-9b90-ff29082c10e5",
+      "user_id": "186f684d-8098-4438-820d-910579191453",
+      "date": "2023-07-26",
+      "wallet": {
+        "id": "87d02458-9a22-4914-9842-a433e0b52399",
+        "user_id": "186f684d-8098-4438-820d-910579191453",
+        "date": "2023-07-26",
+        "name": "MasterCard",
+        "currency": "USD",
+        "balance": 9999999
+      },
+      "total": 100,
+      "category": "buy home",
+      "wallet_id": "87d02458-9a22-4914-9842-a433e0b52399"
+    }
+  ]
 }

@@ -10,11 +10,11 @@ let cardBox = document.querySelector('.items-box')
 let table = document.querySelector('table')
 let userData = JSON.parse(localStorage.getItem("user"))
 
-document.querySelector("#user-name").textContent = userData.name
+document.querySelector("#user-name").textContent = `${userData.surname} ${userData.name}` 
 document.querySelector("#user-email").textContent = userData.email
 
 getData("/cards?user_id=" + userData.id)
-    .then(res => reloadCards(res.data.slice(0, 4), cardBox, 4))
+    .then(res => reloadCards(res.data, cardBox, 4))
 
 let fakeT = [{
     id: 465216,

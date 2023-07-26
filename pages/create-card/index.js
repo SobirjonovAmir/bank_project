@@ -21,7 +21,7 @@ form.onsubmit = (e) => {
 	let card = {
 		"id": uuidv4(),
 		"user_id": userData.id,
-		"date": getDate()
+		"date": new Date().toLocaleDateString('en-CA'),
 	}
 	let fm = new FormData(form)
 	fm.forEach((value, key) => {
@@ -44,17 +44,17 @@ form.onsubmit = (e) => {
 }
 
 
-function getDate() {
-	const currentDate = new Date()
-	const year = currentDate.getFullYear();
-	const month = addZero(currentDate.getMonth() + 1);
-	const day = addZero(currentDate.getDate());
-	return `${year}-${month}-${day}`;
-}
+// function getDate() {
+// 	const currentDate = new Date()
+// 	const year = currentDate.getFullYear();
+// 	const month = addZero(currentDate.getMonth() + 1);
+// 	const day = addZero(currentDate.getDate());
+// 	return `${year}-${month}-${day}`;
+// }
 
-function addZero(number) {
-	return number < 10 ? "0" + number : number;
-}
+// function addZero(number) {
+// 	return number < 10 ? "0" + number : number;
+// }
 
 
 

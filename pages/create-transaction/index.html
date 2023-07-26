@@ -17,8 +17,13 @@
 		</a>
 		<h1>Добавить транзакцию</h1>
 		<form name="create_transaction" action="#">
-			<input required name="wallet" placeholder="Из кошелька" type="text">
-			<input required name="price" placeholder="Сумма" type="number">
+			<select  name="wallet" id="wallet" list="wallet-list">
+				<option value="" disabled hidden selected> Выберите карту</option>
+			</select>
+			<p class="warning" id="wallet-warning"></p>
+			<p class="balance-card"> Balance card: </p>
+			<input required name="total" placeholder="Сумма" type="number">
+			<p class="warning" id="total-warning"></p>
 			<input required name="category" placeholder="Категория" type="text">
 			<button type="submit">Добавить</button>
 		</form>
