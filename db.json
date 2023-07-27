@@ -20,6 +20,34 @@
       "name": "Amir",
       "surname": "Sobirjonov",
       "password": "asdgsd78"
+    },
+    {
+      "id": "5464eeb6-d21d-4f6f-906c-35bdd4d92ed9",
+      "email": "amka7787@gmail.com",
+      "name": "Amir",
+      "surname": "Sobirjonov",
+      "password": "amka2003"
+    },
+    {
+      "id": "ad5a0dd9-fa58-46f3-aa47-7c29c208d626",
+      "email": "amka7787@gmail.com",
+      "name": "Amir",
+      "surname": "Sobirjonov",
+      "password": "amka2003"
+    },
+    {
+      "id": "e9f32667-c9e1-4e3b-89e1-21381bf4793a",
+      "email": "amka7787@gmail.com",
+      "name": "Amir",
+      "surname": "Sobirjonov",
+      "password": "amka2003"
+    },
+    {
+      "id": "1d6ae9a7-eae7-4a39-ac08-0f1cd7be84d9",
+      "email": "amka7787@gmail.com",
+      "name": "Amir",
+      "surname": "Sobirjonov",
+      "password": "amka2003"
     }
   ],
   "cards": [
@@ -89,6 +117,14 @@
       "date": "2023-07-14",
       "categories": "Зачисление зарплаты",
       "sum": 35000
+    },
+    {
+      "id": "d09f6926-45cd-4b60-810f-6cbdfb8b6c08",
+      "user_id": "923b510d-530a-4cd0-9a57-fc35c40f0836",
+      "date": "2023-07-26",
+      "type": "Amir",
+      "categories": "allala",
+      "sum": "1000"
     }
   ]
 }

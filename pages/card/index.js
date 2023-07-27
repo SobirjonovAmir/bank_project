@@ -13,10 +13,10 @@ const item = document.querySelector(".item")
 const transactions_box = document.querySelector("table")
 const cart_place = document.getElementById("multiChart");
 let userData = JSON.parse(localStorage.getItem("user"))
-let card_id = location.search.split("=").at(-1)
 let monthNames = []
 let spendings = []
 
+let card_id = location.search.split("=").at(-1)
 getData("/cards?id=" + card_id)
 	.then(res => {
 		[user] = res.data
