@@ -39,7 +39,7 @@ function header(place) {
 
     icon.src = '/public/exit.png'
 
-
+ 
 
     headers.append(my_action, email)
     my_action.append(home_a, wallet_a, transactions_a)
