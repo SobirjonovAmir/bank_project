@@ -27,17 +27,27 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
   transition: all 1s ease;
-  animation: anim 0.5s ease;
+  animation: anim 0.52s ease;
 }
-
+@keyframes anim {
+  from {
+    translate: 0 80px;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
 form input,
 select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 
+  z-index: 99;
   max-width: 438px;
   border-radius: 10px;
   border: 1px solid #000;
@@ -81,6 +91,16 @@ form button {
 form button:active {
   scale: 0.9;
 }
+select {
+  width: 438px;
+  height: 59px;
+  padding: 0 22px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 16px;
+}
 
 a {
   margin-top: 30px;
@@ -109,12 +129,32 @@ a {
   border: 1px solid black;
   border-radius: 10px;
 }
-@keyframes anim {
+.warning {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.balance-card {
+  color: blue;
+}
+.balance {
+  display: none;
+  height: 20px;
+  overflow: hidden;
+}
+.show {
+  display: block;
+  overflow: hidden;
+  height: 20px;
+  animation: showw 0.5s ease;
+}
+@keyframes showw {
   from {
-    translate: 0 40px;
+    height: 0;
+    translate: 0 20px;
   }
-
   to {
+    height: 20px;
     translate: 0 0;
   }
 }

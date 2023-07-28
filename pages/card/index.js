@@ -1,4 +1,5 @@
 import Card3d from "card3d";
+import axios from 'axios'
 import {
 	createTransactionBox
 } from "/modules/ui";
@@ -7,55 +8,82 @@ import {
 } from "/modules/http"
 import {
 	getRandomColor,
+	getCurrencySymbol
 } from "/modules/helpers"
 
 const item = document.querySelector(".item")
 const transactions_box = document.querySelector("table")
 const cart_place = document.getElementById("multiChart");
-let userData = JSON.parse(localStorage.getItem("user"))
+const convertBtn = document.getElementById("convert");
+const convertView = document.querySelector(".item-convert-balance");
+const loaderContainer = document.querySelector(".loader-container");
+
+let card_id = location.search.split("=").at(-1)
+let card = null
 let monthNames = []
 let spendings = []
 
-let card_id = location.search.split("=").at(-1)
 getData("/cards?id=" + card_id)
 	.then(res => {
 		[user] = res.data
+		card = user
 		document.querySelector(".item-name").textContent = user.name
 		document.querySelector(".item-currency").textContent = user.currency
 		document.querySelector(".item-date").textContent = user.date
-		document.querySelector(".item-balance").textContent = user.balance
+		document.querySelector(".item-balance").innerHTML = `${user.balance.toLocaleString(user.currency)} ${getCurrencySymbol(user.currency)}`
 	})
 
 
-getData("/transactions?card_id=" + card_id)
+getData("/transactions?wallet_id=" + card_id)
 	.then(res => {
 		createTransactionBox(res.data, transactions_box)
 		res.data.forEach(el => {
 			monthNames.push(el.date)
-			spendings.push(el.sum)
+			spendings.push(el.total)
 		})
+		createMultiChart(monthNames, spendings, cart_place);
 	})
 
 
+convertBtn.onclick = async () => {
+	loaderContainer.parentElement.style.display = "block";
+	loaderContainer.style.display = "block";
+	try {
+		const res = await axios.get(`https://api.apilayer.com/fixer/convert?to=UZS&from=${card.currency}&amount=${card.balance}`, {
+			headers: {
+				apiKey: import.meta.env.VITE_API_KEY
+			}
+		})
+		if(res.data.success) {
+			if (res.status === 200 || res.status === 201) {
+				loaderContainer.style.display = "none";
+				convertView.innerHTML = `${Number(res.data.result).toLocaleString('us-US')} ${getCurrencySymbol(res.data.query.to)}`
+			}
+		} else {
+			convertView.innerHTML = `${res?.data?.error?.info}`
+		}
+	} catch(e) {
+		console.log(e);
+	}
+
+}
 
 
-createMultiChart(monthNames, spendings, cart_place);
 
 function createMultiChart(labels, data, place) {
 	const ctx = place.getContext('2d');
-	const multiChart = new Chart(ctx, {
+
+	new Chart(ctx, {
 		type: 'line',
 		data: {
 			labels: labels,
-			datasets: [
-				{
-					label: "Spendings",
-					backgroundColor: "blue",
-					borderColor: "blue",
-					borderWidth: 1.5,
-					data: data,
-				}
-			],
+			datasets: [{
+				label: "Spendings",
+				backgroundColor: "blue",
+				borderColor: "blue",
+				borderWidth: 1.5,
+				data: data,
+			}],
 		},
 		options: {
 			scales: {
