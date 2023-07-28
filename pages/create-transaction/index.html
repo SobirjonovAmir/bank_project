@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/scss/style.scss">
+	<script async src="/modules/poilce.js"></script>
+	<link rel="stylesheet" href="/css/style.css">
 	<title>Добавить транзакцию</title>
 </head>
 
@@ -12,19 +13,19 @@
 
 
 	<div class="container">
-		<a class="back" href="/pages/transactions/">
-			<img src="/public/back.svg" alt="back">
-		</a>
+		<div class="back" onclick="history.back()">
+			<img draggable="false" src="/public/back.svg" alt="back">
+		</div>
 		<h1>Добавить транзакцию</h1>
 		<form name="create_transaction" action="#">
 			<select name="wallet" id="wallet" list="wallet-list">
 				<option value="" disabled hidden selected> Выберите карту</option>
 			</select>
 			<p class="warning" id="wallet-warning"></p>
-			<p class="balance-card"> Balance card: </p>
-			<input required name="total" placeholder="Сумма" type="number">
+			<p class="balance hide"> Баланс карты: <span class="balance-card"></span> </p>
+			<input min="1" name="total" placeholder="Сумма" type="number">
 			<p class="warning" id="total-warning"></p>
-			<input required name="category" placeholder="Категория" type="text">
+			<input  name="category" placeholder="Категория" type="text">
 			<button type="submit">Добавить</button>
 		</form>
 	</div>

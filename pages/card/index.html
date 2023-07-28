@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script async src="/modules/poilce.js"></script>
 	<script async src="/modules/layout.js"></script>
-	<link rel="stylesheet" href="/scss/home.scss">
+	<link rel="stylesheet" href="/css/home.css">
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<title>Document</title>
 </head>
@@ -18,6 +18,7 @@
 			<div class="wrapper">
 				<div class="card-box">
 					<div data-card3d="" data-card3d-reverse="true" class="item">
+						<img src="https://i.ibb.co/PYss3yv/map.png" alt="">
 						<p class="item-name"> Visa</p>
 						<p class="item-currency">RUB</p>
 					</div>
@@ -25,9 +26,12 @@
 						<p>Дата создания: <span class="item-date"></span></p>
 						<p>Баланс: <span class="item-balance"></span></p>
 					</div>
-					<button id="convert" >CONVERT TO UZS</button>
+					<button id="convert">Конвертировать в сўм</button>
 					<div class="about-card">
-						<p>Баланс: <span class="item-convert-balance"></span></p>
+						<div class="loader-container">
+							<div class="loader"></div>
+						</div>
+						<p class="item-convert-balance"></p>
 					</div>
 				</div>
 

@@ -8,6 +8,7 @@ import {
 } from "/modules/http"
 import {
 	getRandomColor,
+	getCurrencySymbol
 } from "/modules/helpers"
 
 const item = document.querySelector(".item")
@@ -15,7 +16,7 @@ const transactions_box = document.querySelector("table")
 const cart_place = document.getElementById("multiChart");
 const convertBtn = document.getElementById("convert");
 const convertView = document.querySelector(".item-convert-balance");
-
+const loaderContainer = document.querySelector(".loader-container");
 
 let card_id = location.search.split("=").at(-1)
 let card = null
@@ -29,7 +30,7 @@ getData("/cards?id=" + card_id)
 		document.querySelector(".item-name").textContent = user.name
 		document.querySelector(".item-currency").textContent = user.currency
 		document.querySelector(".item-date").textContent = user.date
-		document.querySelector(".item-balance").textContent = user.balance
+		document.querySelector(".item-balance").innerHTML = `${user.balance.toLocaleString(user.currency)} ${getCurrencySymbol(user.currency)}`
 	})
 
 
@@ -45,19 +46,21 @@ getData("/transactions?wallet_id=" + card_id)
 
 
 convertBtn.onclick = async () => {
+	loaderContainer.parentElement.style.display = "block";
+	loaderContainer.style.display = "block";
 	try {
 		const res = await axios.get(`https://api.apilayer.com/fixer/convert?to=UZS&from=${card.currency}&amount=${card.balance}`, {
 			headers: {
 				apiKey: import.meta.env.VITE_API_KEY
 			}
 		})
-		console.log(res.data.success);
 		if(res.data.success) {
 			if (res.status === 200 || res.status === 201) {
-				convertView.innerHTML = Number(res.data.result).toLocaleString('uz-UZ')
+				loaderContainer.style.display = "none";
+				convertView.innerHTML = `${Number(res.data.result).toLocaleString('us-US')} ${getCurrencySymbol(res.data.query.to)}`
 			}
 		} else {
-			convertView.innerHTML = res?.data?.error?.info
+			convertView.innerHTML = `${res?.data?.error?.info}`
 		}
 	} catch(e) {
 		console.log(e);
